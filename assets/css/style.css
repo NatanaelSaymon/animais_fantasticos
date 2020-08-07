@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #FAF6ED;
   color: #333;
@@ -98,6 +102,19 @@ body {
   overflow-y: scroll;
   /*O que passar da altura de 370px, vai inserir um scroll*/
   grid-column: 2;
+}
+
+.js-tabAnimal {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+ul li {
+  scroll-snap-align: center;
+}
+
+.animais-lista img {
+  cursor: pointer;
 }
 
 /*Estilizando a barra de scroll*/
@@ -185,6 +202,28 @@ body {
   font-family: monospace;
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+/* NAVEGAÇÃO TAB */
+.js-tabContent section {
+  display: none;
+}
+
+.js-tabContent section.active {
+  display: block;
+  animation: show .3s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
+  }
 }
 
 /*Responsivo*/
