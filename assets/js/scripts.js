@@ -1,10 +1,17 @@
-import initTabNav from './modules/tabNav.js'
+import initScrollAnimation from './modules/scroll-animation.js'
 import initAccordionList from './modules/accordion.js'
-import initScrollAnimation from './modules/scroll.js'
+import initTabNav from './modules/navTab.js'
 
-initTabNav()
-initAccordionList()
 initScrollAnimation()
+initAccordionList()
+initTabNav()
+
+
+
+
+
+
+
 
 
 
