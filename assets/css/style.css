@@ -171,21 +171,21 @@ ul li {
 }
 
 /* ACCORDION LIST */
-.js-accordionList dt::after {
+[data-anima="accordion"] dt::after {
   content: "⬎";
   margin-left: 10px;
 }
 
-.js-accordionList dt.active::after {
+[data-anima="accordion"] dt.active::after {
   content: "⬏";
 }
 
-.js-accordionList dd {
+[data-anima="accordion"] dd {
   display: none;
   animation: slideDown 0.5s forwards;
 }
 
-.js-accordionList dd.active {
+[data-anima="accordion"] dd.active {
   display: block;
 }
 

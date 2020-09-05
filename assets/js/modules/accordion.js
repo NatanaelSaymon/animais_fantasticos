@@ -1,5 +1,5 @@
 export default function initAccordionList() {
-  const accordion = document.querySelectorAll('.js-accordionList dt')
+  const accordion = document.querySelectorAll('[data-anima="accordion"] dt')
 
   accordion[0].classList.add('active')
   accordion[0].nextElementSibling.classList.add('active')
