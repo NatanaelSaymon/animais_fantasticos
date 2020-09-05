@@ -1,5 +1,5 @@
 export default function initScrollAnimation() {
-  const sections = document.querySelectorAll('.js-scroll')
+  const sections = document.querySelectorAll('[data-anima="scroll"]')
   const windowMetade = window.innerHeight * 0.6
 
   function scroll() {
