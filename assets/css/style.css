@@ -104,7 +104,7 @@ body {
   grid-column: 2;
 }
 
-.js-tabAnimal {
+[data-tab="animal"] {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
@@ -238,19 +238,38 @@ ul li {
 }
 
 /* NAVEGAÇÃO TAB */
-.js-tabContent section {
+[data-tab="content"] section {
   display: none;
 }
 
-.js-tabContent section.active {
+[data-tab="content"] section.active {
   display: block;
-  animation: show 0.3s forwards;
 }
 
-@keyframes show {
+[data-tab="content"] section.active.show-right {
+  animation: showRight 0.3s forwards;
+}
+
+[data-tab="content"] section.active.show-down {
+  animation: showDown 0.3s forwards;
+}
+
+@keyframes showRight{
   from {
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes showDown{
+  from {
+    opacity: 0;
+    transform: translate3d(0, -40px, 0);
   }
 
   to {

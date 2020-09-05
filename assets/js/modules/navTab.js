@@ -1,6 +1,6 @@
 export default function initTabNav() {
-  const tabAnimal = document.querySelectorAll('.js-tabAnimal li')
-  const tabContent = document.querySelectorAll('.js-tabContent section')
+  const tabAnimal = document.querySelectorAll('[data-tab="animal"] li')
+  const tabContent = document.querySelectorAll('[data-tab="content"] section')
 
   if (tabAnimal.length && tabContent) {
     tabContent[0].classList.add('active')
@@ -9,7 +9,8 @@ export default function initTabNav() {
       tabContent.forEach((content) => {
         content.classList.remove('active')
       })
-      tabContent[index].classList.add('active')
+      const animalSelected = tabContent[index].dataset.anima
+      tabContent[index].classList.add('active', animalSelected)
     }
 
     tabAnimal.forEach((imageItem, index) => {
