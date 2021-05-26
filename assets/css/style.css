@@ -1,3 +1,4 @@
+/*=== Reset ===*/
 * {
   margin: 0;
   padding: 0;
@@ -21,8 +22,13 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --color-primary: #FB5;
+  --color-secondary: #FAF6ED;
+}
+
 body {
-  background: #faf6ed;
+  background: var(--color-secondary);
   color: #333;
   display: grid;
   grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
@@ -32,7 +38,7 @@ body {
   grid-column: 3 / 5;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  background: #fb5;
+  background: var(--color-primary);
 }
 
 .menu ul {
@@ -50,7 +56,6 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 18px;
-  /*18px*/
   letter-spacing: 0.1em;
 }
 
@@ -88,7 +93,7 @@ body {
   width: 40px;
   height: 10px;
   margin-right: 10px;
-  background: #fb5;
+  background: var(--color-primary);
 }
 
 .animais p {
@@ -99,8 +104,7 @@ body {
 
 .animais-lista {
   height: 370px;
-  overflow-y: scroll;
-  /*O que passar da altura de 370px, vai inserir um scroll*/
+  overflow-y: scroll; /*O que passar da altura de 370px, vai inserir um scroll*/
   grid-column: 2;
 }
 
@@ -117,19 +121,19 @@ ul li {
   cursor: pointer;
 }
 
-/*Estilizando a barra de scroll*/
+/*=== Estilizando a barra de scroll ===*/
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
 
 .animais-lista::-webkit-scrollbar-thumb {
-  background: #fb5;
-  border-left: 4px solid #faf6ed;
-  border-right: 4px solid #faf6ed;
+  background: var(--color-primary);
+  border-left: 4px solid var(--color-secondary);
+  border-right: 4px solid var(--color-secondary);
 }
 
 .animais-lista::-webkit-scrollbar-track {
-  background: #faf6ed;
+  background: var(--color-secondary);
 }
 
 .animais-descricao {
@@ -140,7 +144,7 @@ ul li {
   margin-bottom: 3rem;
 }
 
-/*FAQ*/
+/*=== FAQ ===*/
 .faq-lista {
   grid-column: 2 / 4;
 }
@@ -161,7 +165,7 @@ ul li {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #fb5;
+  background: var(--color-primary);
 }
 
 .faq-lista dd {
@@ -170,7 +174,7 @@ ul li {
   margin-left: 30px;
 }
 
-/* ACCORDION LIST */
+/*=== ACCORDION LIST ===*/
 [data-anima="accordion"] dt::after {
   content: "⬎";
   margin-left: 10px;
@@ -201,7 +205,7 @@ ul li {
   }
 }
 
-/* CONTATO */
+/*=== CONTATO ===*/
 .mapa {
   grid-column: 2;
 }
@@ -221,13 +225,13 @@ ul li {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #fb5;
+  background: var(--color-primary);
 }
 
 .copy {
   grid-column: 3 / 5;
   margin-bottom: 2rem;
-  background: #fb5;
+  background: var(--color-primary);
 }
 
 .copy p {
@@ -237,7 +241,7 @@ ul li {
   font-size: 1.3rem;
 }
 
-/* NAVEGAÇÃO TAB */
+/*=== NAVEGAÇÃO TAB ===*/
 [data-tab="content"] section {
   display: none;
 }
@@ -278,7 +282,7 @@ ul li {
   }
 }
 
-/* SCROLL ANIMATION */
+/*=== SCROLL ANIMATION ===*/
 [data-anima="scroll"] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
@@ -290,7 +294,7 @@ ul li {
   transform: translate3d(0, 0, 0);
 }
 
-/* Responsivo */
+/*=== Responsivo ===*/
 @media (max-width: 700px) {
   body {
     grid-template-columns: 1fr;
